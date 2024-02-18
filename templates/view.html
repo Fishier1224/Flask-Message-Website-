@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Messages</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Random Messages</h1>
+        <ul>
+            {% for message in messages %}
+            <li><strong>{{ message[0] }}:</strong> {{ message[1] }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
